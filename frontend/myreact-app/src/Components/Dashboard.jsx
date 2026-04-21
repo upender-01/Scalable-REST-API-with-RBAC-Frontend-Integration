@@ -13,7 +13,7 @@ export default function Dashboard() {
     const token = localStorage.getItem('token');
     if (!token) return navigate('/');
 
-    const response = await fetch('http://localhost:5000/api/v1/tasks', {
+    const response = await fetch('https://scalable-rest-api-with-rbac-frontend-ifrn.onrender.com/api/v1/tasks', {
       headers: { 'Authorization': `Bearer ${token}` }
     });
     if (response.ok) {
