@@ -18,6 +18,9 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.log(err));
 
 // --- AUTHENTICATION APIs ---
+app.get('/', (req, res) => {
+  res.send("Backend is Working");
+});
 app.post('/api/v1/auth/register', async (req, res) => {
   try {
     const { username, password, role } = req.body;
