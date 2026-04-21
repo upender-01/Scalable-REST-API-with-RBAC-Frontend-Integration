@@ -33,7 +33,7 @@ export default function Dashboard() {
     e.preventDefault();
     const token = localStorage.getItem('token');
     
-    const response = await fetch('http://localhost:5000/api/v1/tasks', {
+    const response = await fetch('https://scalable-rest-api-with-rbac-frontend-ifrn.onrender.com/api/v1/tasks', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ export default function Dashboard() {
   // Delete Task
   const handleDeleteTask = async (id) => {
     const token = localStorage.getItem('token');
-    const response = await fetch(`http://localhost:5000/api/v1/tasks/${id}`, {
+    const response = await fetch(`https://scalable-rest-api-with-rbac-frontend-ifrn.onrender.com/api/v1/tasks/${id}`, {
       method: 'DELETE',
       headers: { 'Authorization': `Bearer ${token}` }
     });
