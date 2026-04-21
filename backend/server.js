@@ -10,7 +10,11 @@ const Task = require('./models/Task');
 const { verifyToken } = require('./middleware/auth');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://rest-api-00.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
