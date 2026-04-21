@@ -1,5 +1,5 @@
 
-import {HashRouter as Router , Routes , Route , Navigate} from 'react-router-dom';
+import {BrowserRouter as Router , Routes , Route , Navigate} from 'react-router-dom';
 import Login from "./Components/Login";
 import Dashboard from "./Components/Dashboard";
 import Register from "./Components/Register";
